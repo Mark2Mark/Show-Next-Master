@@ -10,7 +10,10 @@ Download or clone the whole `Glyphsapp-Plugins`repo (it will contain more plugin
 
 ### Examples
 
-Coming up …
+![Show Next Master Demo](https://raw.githubusercontent.com/DeutschMark/Show-Next-Master/master/Screenshots/Show%20Next%20Master%2001.png?raw=true "Show Next Master Demo")
+
+![Show Next Master Demo](https://github.com/DeutschMark/Show-Next-Master/blob/master/Screenshots/Show%20Next%20Master%2002.png?raw=true "Show Next Master Demo")
+
 
 ### Known issues
 
