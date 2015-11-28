@@ -6,14 +6,18 @@ This is a Plugin for the [Glyphs font editor](http://glyphsapp.com/). It display
 1. Compare the currently active with the next master. No visual overkill of seein all masters or interpolations at once.
 2. Set up your font with additional masters that have the custom name "Original". These can be used as a visual comparisson feedback (e.g. older Versions). The "Original" master will be highlighted in red when active, this is meant as a warning to keep your hands off it.
 
-### How to use
+### Install
 
 1. Download or clone this repository.
-2. Either:
+2.  Then either:
 ⋅⋅⋅Double click the `.reporter` file and confirm the dialogue in Glyphsapp to install.
 Or:
 ⋅⋅⋅copy the `.glyphsReporter` into your Glyphsapp Plugins folder (eg. `/Library/Application\ Support/Glyphs/Plugins`)
-3. restart Glyphs and when ever you need it, toggle `Show * Next Master` from the view menu.
+3. restart Glyphs
+
+### How to use
+
+When ever you need it, toggle `Show * Next Master` from the view menu.
 
 ### Examples
 
@@ -22,15 +26,15 @@ Or:
 ![Show Next Master Demo](https://github.com/DeutschMark/Show-Next-Master/blob/master/Screenshots/Show%20Next%20Master%2002.png?raw=true "Show Next Master Demo")
 
 
-### Known issues
+## Known issues
 
 - None so far
 
-### Pull Requests
+## Pull Requests
 
 Feel free to comment or pull requests for any improvements.
 
-### License
+## License
 
 Copyright 2015 [Mark Frömberg](http://www.markfromberg.com/) *@DeutschMark*
 
