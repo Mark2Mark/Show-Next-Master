@@ -1,6 +1,6 @@
 # Show Next Master
 
-## Plugin for Glyphsapp
+### Plugin for Glyphsapp
 
 This is a Plugin for the [Glyphs font editor](http://glyphsapp.com/). It displays the next Master in the currently active edit view. This can be usefull in different ways:
 1. Compare the currently active with the next master. No visual overkill of seein all masters or interpolations at once.
@@ -26,15 +26,15 @@ When ever you need it, toggle `Show * Next Master` from the view menu.
 ![Show Next Master Demo](https://github.com/DeutschMark/Show-Next-Master/blob/master/Screenshots/Show%20Next%20Master%2002.png?raw=true "Show Next Master Demo")
 
 
-## Known issues
+#### Known issues
 
 - None so far
 
-## Pull Requests
+#### Pull Requests
 
 Feel free to comment or pull requests for any improvements.
 
-## License
+#### License
 
 Copyright 2015 [Mark Frömberg](http://www.markfromberg.com/) *@DeutschMark*
 
