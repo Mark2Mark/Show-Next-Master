@@ -3,8 +3,9 @@
 *This is a plugin for the [Glyphs font editor](http://glyphsapp.com/).*  
 
 It displays the next Master in the currently active edit view. This can be usefull in different ways:  
-1. Compare the currently active with the next master. No visual overkill of seein all masters or interpolations at once.
-2. Set up your font with additional masters that have the custom name "Original". These can be used as a visual comparisson feedback (e.g. older Versions). The "Original" master will be highlighted in red when active, this is meant as a warning to keep your hands off it.
+
+1. Compare the currently active with the next master. No visual overkill of seein all masters or interpolations at once.  
+2. Set up your font with additional masters that have the custom name "Original". These can be used as a visual comparisson feedback (e.g. older Versions). The "Original" master will be highlighted in red when active, this is meant as a warning to keep your hands off it.  
 
 ### Install
 
