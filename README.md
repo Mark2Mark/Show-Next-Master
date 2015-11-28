@@ -9,8 +9,10 @@ This is a Plugin for the [Glyphs font editor](http://glyphsapp.com/). It display
 ### Install
 
 1. Download or clone this repository.
-2. + Either: Double click the `.reporter` file and confirm the dialogue in Glyphsapp to install.
-+ Or: Copy the `.glyphsReporter` into your Glyphsapp Plugins folder (eg. `/Library/Application\ Support/Glyphs/Plugins`)
+2. Either:
+   Double click the `.reporter` file and confirm the dialogue in Glyphsapp to install.
+   Or:
+   Copy the `.glyphsReporter` into your Glyphsapp Plugins folder (eg. `/Library/Application\ Support/Glyphs/Plugins`)
 3. restart Glyphs
 
 ### How to use
