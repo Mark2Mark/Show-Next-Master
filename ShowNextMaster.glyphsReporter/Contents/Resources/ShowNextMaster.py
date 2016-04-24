@@ -15,7 +15,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 import objc
-from Foundation import *
+# from Foundation import *
 from AppKit import *
 import sys, os, re
 
@@ -33,6 +33,7 @@ class ShowNextMaster ( NSObject, GlyphsReporterProtocol ):
 	def init( self ):
 		try:
 			#Bundle = NSBundle.bundleForClass_( NSClassFromString( self.className() ));
+			self.masterDirection = 1
 			return self
 		except Exception as e:
 			self.logToConsole( "init: %s" % str(e) )
@@ -67,6 +68,24 @@ class ShowNextMaster ( NSObject, GlyphsReporterProtocol ):
 		except Exception as e:
 			self.logToConsole( "drawForegroundForLayer_: %s" % str(e) )
 
+	def setNextMaser(self):
+		self.masterDirection = 1
+		
+
+	def setPreviousMaser(self):
+		self.masterDirection = -1
+
+	def addMenuItemsForEvent_toMenu_(self, event, contextMenu):
+		try:
+			newMenuItemA = NSMenuItem.alloc().initWithTitle_action_keyEquivalent_("Show Next Master", "setNextMaser", "")
+			newMenuItemB = NSMenuItem.alloc().initWithTitle_action_keyEquivalent_("Show Previous Master", "setPreviousMaser", "")
+			newMenuItemA.setTarget_(self)
+			newMenuItemB.setTarget_(self)
+			contextMenu.addItem_(newMenuItemA)
+			contextMenu.addItem_(newMenuItemB)
+		except:
+			self.logError(traceback.format_exc())
+
 	
 	def drawNextMaster( self, Layer ):
 
@@ -75,30 +94,38 @@ class ShowNextMaster ( NSObject, GlyphsReporterProtocol ):
 		thisMaster = Font.selectedFontMaster
 		masters = Font.masters
 
-		try:
-			# Glyphs 2 (Python 2.7)
-			activeMasterIndex = masters.index(thisMaster)
-		except:
-			# Glyphs 1 (Python 2.6)
-			for i, k in enumerate(masters):
-				if thisMaster == masters[i]:
-					activeMasterIndex = i
+		activeMasterIndex = masters.index(thisMaster)
 
-		self.logToConsole(thisMaster.name)
 		if not "Original".lower() in thisMaster.name.lower():
 
-			#nextLayer = Layer.parent.layers[activeMasterIndex]
-			if activeMasterIndex < len(masters)-1:
-				nextLayer = Layer.parent.layers[activeMasterIndex+1]	
-				drawingColor = 0.1, 0.5, 0.6, 0.45 
+			lastMasterInList = False
+
+			if self.masterDirection == 1:
+				if activeMasterIndex < len(masters) - 1:
+					activeMasterIndex = activeMasterIndex
+				else:
+					activeMasterIndex = activeMasterIndex -1
+					lastMasterInList = True
+			if self.masterDirection == -1:
+				if activeMasterIndex == 0:
+					activeMasterIndex = activeMasterIndex +1
+					lastMasterInList = True
+
+
+			nextLayer = Layer.parent.layers[activeMasterIndex + self.masterDirection]
+			
+			if not lastMasterInList:
+				drawingColor = 0.1, 0.5, 0.6, 0.45
 			else:
-				nextLayer = Layer.parent.layers[activeMasterIndex]
 				drawingColor = 0.1, 0.5, 0.6, 0.15
 			
+
 			# draw path AND components:
 			NSColor.colorWithCalibratedRed_green_blue_alpha_( *drawingColor ).set()
-			#thisBezierPathWithComponent = Layer.copyDecomposedLayer().bezierPath()
-			thisBezierPathWithComponent = nextLayer.copyDecomposedLayer().bezierPath()
+			try:
+				thisBezierPathWithComponent = nextLayer.copyDecomposedLayer().bezierPath()
+			except:
+				thisBezierPathWithComponent = nextLayer.copyDecomposedLayer().bezierPath
 			
 			if thisBezierPathWithComponent:
 				thisBezierPathWithComponent.fill()
@@ -106,14 +133,17 @@ class ShowNextMaster ( NSObject, GlyphsReporterProtocol ):
 		if "Original".lower() in thisMaster.name.lower():
 			drawingColor = 1, 0, 0, 0.65 ### For Meta Science
 			NSColor.colorWithCalibratedRed_green_blue_alpha_( *drawingColor ).set()
-			thisBezierPathWithComponent = Layer.copyDecomposedLayer().bezierPath()
+			try:
+				thisBezierPathWithComponent = Layer.copyDecomposedLayer().bezierPath()
+			except:
+				thisBezierPathWithComponent = Layer.copyDecomposedLayer().bezierPath
 			if thisBezierPathWithComponent:
 				thisBezierPathWithComponent.fill()
 
 
 	def drawBackgroundForLayer_( self, Layer ):
 		try:
-			NSColor.colorWithCalibratedRed_green_blue_alpha_( 0.0, 0.5, 0.3, 0.5 ).set()
+			# NSColor.colorWithCalibratedRed_green_blue_alpha_( 0.0, 0.5, 0.3, 0.5 ).set()
 			self.drawNextMaster( Layer )
 		except Exception as e:
 			self.logToConsole( "drawBackgroundForLayer_: %s" % str(e) )

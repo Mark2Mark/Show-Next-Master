@@ -1,26 +1,41 @@
 # Show Next Master
 
-## Plugin for Glyphsapp
+*This is a plugin for the [Glyphs font editor](http://glyphsapp.com/).*  
 
-This is a Plugin for the [Glyphs font editor](http://glyphsapp.com/). It displays the next Master in the currently active edit view. This can be usefull in many ways. For instance if you want to compare the current with the next master but without the visual overkill of seein all masters at once. Another handy feature is to set up your font with additional masters that have the custom name "Original". These can be used as a visual comparisson feedback (e.g. with older Versions). If you do this, the Original master will be highlighted in red, in order inform you that you are in the original master that you might not want to touch.
+It displays the next Master in the currently active edit view. This can be usefull in different ways:  
+
+1. Compare the currently active with the next master. No visual overkill of seein all masters or interpolations at once.  
+2. Set up your font with additional masters that have the custom name "Original". These can be used as a visual comparisson feedback (e.g. older Versions). The "Original" master will be highlighted in red when active, this is meant as a warning to keep your hands off it.  
+
+### Install
+
+1. Download or clone this repository.
+2. Either:  
+   Double click the `.glyphsReporter` file and confirm the dialogue in Glyphsapp to install.  
+   Or:  
+   Copy the `.glyphsReporter` into your Glyphsapp Plugins folder (eg. `/Library/Application\ Support/Glyphs/Plugins`). You can use subfolders (e.g. to sort plugins by author) there.
+3. Restart Glyphs.
 
 ### How to use
 
-Download or clone the whole `Glyphsapp-Plugins`repo (it will contain more plugins soon). Double click the .reporter file and confirm the dialogue in Glyphsapp to install. Or copy the `ShowNodeCount.glyphsReporter` into your Glyphsapp Plugins folder (eg. `/Library/Application\ Support/Glyphs/Plugins`), restart Glyphs and when ever you need it, toggle `Show Rotated` from the view menu.
+When ever you need it, toggle `Show * Next Master` from the view menu.
 
 ### Examples
 
-Coming up …
+![Show Next Master Demo](https://raw.githubusercontent.com/DeutschMark/Show-Next-Master/master/Screenshots/Show%20Next%20Master%2001.png?raw=true "Show Next Master Demo")
 
-### Known issues
+![Show Next Master Demo](https://github.com/DeutschMark/Show-Next-Master/blob/master/Screenshots/Show%20Next%20Master%2002.png?raw=true "Show Next Master Demo")
+
+
+##### Known issues
 
 - None so far
 
-### Pull Requests
+##### Pull Requests
 
 Feel free to comment or pull requests for any improvements.
 
-### License
+##### License
 
 Copyright 2015 [Mark Frömberg](http://www.markfromberg.com/) *@Mark2Mark*
 
@@ -32,8 +47,4 @@ You may obtain a copy of the License at
 
 http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+See the License file included in this repository for further details.
