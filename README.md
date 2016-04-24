@@ -22,7 +22,7 @@ Feel free to comment or pull requests for any improvements.
 
 ### License
 
-Copyright 2015 [Mark Frömberg](http://www.markfromberg.com/) *@DeutschMark*
+Copyright 2015 [Mark Frömberg](http://www.markfromberg.com/) *@Mark2Mark*
 
 Made possible with the GlyphsSDK by Georg Seifert (@schriftgestalt) and Rainer Erich Scheichelbauer (@mekkablue).
 
