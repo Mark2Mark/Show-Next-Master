@@ -5,7 +5,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #
 # --> let me know if you have ideas for improving
-# --> Mark Froemberg aka DeutschMark @ GitHub
+# --> Mark Froemberg aka Mark2Mark @ GitHub
 # --> www.markfromberg.com
 #
 # - ToDo
