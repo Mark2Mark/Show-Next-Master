@@ -46,7 +46,7 @@ class ShowNextMaster ( NSObject, GlyphsReporterProtocol ):
 	
 	def title( self ):
 		try:
-			return "* Next Master"
+			return "Next Master"
 		except Exception as e:
 			self.logToConsole( "title: %s" % str(e) )
 	
